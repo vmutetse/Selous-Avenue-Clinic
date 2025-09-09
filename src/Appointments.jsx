@@ -579,13 +579,14 @@ const Appointments = () => {
 
       // Show success message
       setModalMessage("Appointment saved successfully!");
+      resetFormFields();
     } catch (error) {
       console.error("Error saving appointment: ", error);
       setModalMessage("Failed to save appointment. Please try again.");
     } finally {
       setLoading(false);
       setModalVisible(true);
-      resetFormFields();
+      
     }
   };
 
